@@ -13,11 +13,35 @@ body {
 
 /* Wrapper Styles */
 .global-content-wrapper {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-image: url(./assets/bg.png);
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.global-text-content-wrapper {
+  min-height: 400px;
+  min-width: 600px;
+  background-image: url('./assets/border.png');
+  background-size: contain;
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+/* Game Screen One */
+.intro-container {
+  position: relative;
+}
+
+.intro-game-pic {
+  position: absolute;
+  top: 50px;
+  left: -80px;
+}
+
+.intro-game-pic img {
+  height: 300px;
 }

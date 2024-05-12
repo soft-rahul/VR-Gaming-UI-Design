@@ -1,14 +1,7 @@
-import Wrapper from "./components/Wrapper/Wrapper";
-import WrapperText from "./components/Wrapper/WrapperText";
+import GameIntro from "./components/Screens/GameIntro";
 
 const App = () => {
-  return (
-    <Wrapper>
-      <WrapperText>
-        <div>Hello, React!</div>
-      </WrapperText>
-    </Wrapper>
-  );
+  return <GameIntro />;
 };
 
 export default App;
