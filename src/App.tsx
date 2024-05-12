@@ -1,9 +1,12 @@
 import Wrapper from "./components/Wrapper/Wrapper";
+import WrapperText from "./components/Wrapper/WrapperText";
 
 const App = () => {
   return (
     <Wrapper>
-      <div>Hello , React!</div>
+      <WrapperText>
+        <div>Hello, React!</div>
+      </WrapperText>
     </Wrapper>
   );
 };
