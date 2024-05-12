@@ -139,6 +139,9 @@ ol {
   color: #fff;
 }
 
+.instructions ol {
+  padding-left: 10px;
+}
 .instructions li {
   font-size: 14px;
   font-family: "Titillium Web", sans-serif;

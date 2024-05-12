@@ -3,20 +3,43 @@ import GameIntro from "./components/Screens/GameIntro";
 import GameInstructions from "./components/Screens/GameInstructions";
 
 const App = () => {
-  const [showIntro, setShowIntro] = useState(false);
-  const [showInstructions, setShowInstructions] = useState(true);
+  const [showIntro, setShowIntro] = useState(true);
+  const [showInstructions, setShowInstructions] = useState(false);
   const [showGameStartingScreen, setShowGameStartingScreen] = useState(false);
+
+  const playTheGameHandler = () => {
+    setShowIntro(false);
+    setShowInstructions(false);
+    setShowGameStartingScreen(true);
+  };
+
+  const showInstructionsHandler = () => {
+    setShowIntro(false);
+    setShowInstructions(true);
+    setShowGameStartingScreen(false);
+  };
+
+  const showGameIntroHandler = () => {
+    setShowIntro(true);
+    setShowInstructions(false);
+    setShowGameStartingScreen(false);
+  };
+
   return (
     <>
       {showIntro && !showInstructions && !showGameStartingScreen && (
-        <GameIntro />
+        <GameIntro
+          playHandler={playTheGameHandler}
+          showInstructions={showInstructionsHandler}
+        />
       )}
       {!showIntro && showInstructions && !showGameStartingScreen && (
-        <GameInstructions />
+        <GameInstructions
+          playHandler={playTheGameHandler}
+          showGameIntro={showGameIntroHandler}
+        />
       )}
-      {!showIntro && !showInstructions && showGameStartingScreen && (
-        <GameIntro />
-      )}
+      {!showIntro && !showInstructions && showGameStartingScreen && <div></div>}
     </>
   );
 };

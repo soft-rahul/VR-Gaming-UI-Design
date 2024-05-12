@@ -7,14 +7,14 @@ import { useEffect, useState } from "react";
 import { API_ENDPOINT } from "../../API/url";
 import { HardCodedGameName } from "../../Constant/gameName";
 
-const GameIntro = () => {
+interface Props {
+  playHandler: () => void;
+  showInstructions: () => void;
+}
+
+const GameIntro = (props: Props) => {
+  const { playHandler, showInstructions } = props;
   const [gameName, setGameName] = useState(HardCodedGameName);
-  const playHandler = () => {
-    console.log("How to Play");
-  };
-  const startGameHandler = () => {
-    console.log("Start Game");
-  };
 
   // fetch function
   const fetchGameDetails = async () => {
@@ -60,8 +60,8 @@ const GameIntro = () => {
               </div>
             </div>
             <div className="intro-buttons">
-              <ButtonSkin label="How To Play" onChange={playHandler} />
-              <ButtonSkin label="Start Game" onChange={startGameHandler} />
+              <ButtonSkin label="How To Play" onChange={showInstructions} />
+              <ButtonSkin label="Start Game" onChange={playHandler} />
             </div>
           </section>
         </WrapperText>

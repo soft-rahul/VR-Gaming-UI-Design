@@ -2,7 +2,13 @@ import ButtonSkin from "../BTN/Button";
 import Wrapper from "../Wrapper/Wrapper";
 import WrapperText from "../Wrapper/WrapperText";
 
-const GameInstructions = () => {
+interface Props {
+  playHandler: () => void;
+  showGameIntro: () => void;
+}
+
+const GameInstructions = (props: Props) => {
+  const { playHandler, showGameIntro } = props;
   return (
     <Wrapper>
       <WrapperText>
@@ -29,8 +35,8 @@ const GameInstructions = () => {
             </ol>
           </div>
           <div className="instructions-buttons">
-            <ButtonSkin label="Go Back" onChange={() => {}} />
-            <ButtonSkin label="Start Game" onChange={() => {}} />
+            <ButtonSkin label="Go Back" onChange={showGameIntro} />
+            <ButtonSkin label="Start Game" onChange={playHandler} />
           </div>
         </div>
       </WrapperText>
