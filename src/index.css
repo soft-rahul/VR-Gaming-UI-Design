@@ -21,6 +21,11 @@ p {
   margin: 0;
 }
 
+ol {
+  margin: 0;
+  padding: 0;
+}
+
 /* Wrapper Styles */
 .global-content-wrapper {
   min-height: 100vh;
@@ -83,7 +88,8 @@ p {
   color: #fff;
 }
 
-.intro-content h1 {
+.intro-content h1,
+.general-heading {
   font-family: "Passion One", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -125,4 +131,25 @@ p {
   margin-top: 1rem;
   display: flex;
   gap: 2.5rem;
+}
+
+/* Instructions Wrapper Styles */
+.instructions-wrapper {
+  padding: 2rem 4rem;
+  color: #fff;
+}
+
+.instructions li {
+  font-size: 14px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.instructions-buttons {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
 }
