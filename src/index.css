@@ -11,6 +11,16 @@ body {
   background-color: #ccc;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
 /* Wrapper Styles */
 .global-content-wrapper {
   min-height: 100vh;
@@ -24,11 +34,12 @@ body {
 
 .global-text-content-wrapper {
   min-height: 400px;
-  min-width: 600px;
+  width: 600px;
   background-image: url('./assets/border.png');
   background-size: contain;
   background-position: 100% 100%;
   background-repeat: no-repeat;
+  display: flex;
 }
 
 /* Button Styles */
@@ -46,6 +57,7 @@ body {
   font-weight: 600;
   font-style: normal;
   text-align: center;
+  cursor: pointer;
 }
 
 /* Game Screen One */
@@ -55,10 +67,62 @@ body {
 
 .intro-game-pic {
   position: absolute;
-  top: 50px;
-  left: -80px;
+  top: 60px;
+  left: -100px;
 }
 
 .intro-game-pic img {
   height: 300px;
+}
+
+.intro-content-wrapper {
+  margin: 3rem 1rem 1rem 8rem;
+}
+
+.intro-content {
+  color: #fff;
+}
+
+.intro-content h1 {
+  font-family: "Passion One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4;
+  letter-spacing: 4px;
+  margin: 0.5rem 0;
+}
+
+.intro-content p {
+  margin: 0.5rem 0 1rem;
+  font-size: 14px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.intro-content .label-box {
+  display: flex;
+  gap: 4rem;
+  width: 320px;
+  justify-content: space-between;
+}
+
+.intro-content .label-light {
+  flex: 1;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.intro-content .label-bold {
+  flex: 1;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.intro-buttons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2.5rem;
 }
