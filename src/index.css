@@ -31,6 +31,23 @@ body {
   background-repeat: no-repeat;
 }
 
+/* Button Styles */
+.global-button {
+  min-width: 120px;
+  padding: 0.8rem 0.5rem;
+  background-image: url(/src/assets/button.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: 100%;
+  border: none;
+  color: #fff;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+}
+
 /* Game Screen One */
 .intro-container {
   position: relative;
