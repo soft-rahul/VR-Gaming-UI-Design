@@ -1,0 +1,1 @@
+export const API_ENDPOINT = 'https://378027ioph.execute-api.ap-south-1.amazonaws.com/test/Users?id=ec14dcc2-304d-4052-a177-01d68dd6a952';

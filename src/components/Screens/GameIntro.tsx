@@ -3,8 +3,12 @@ import WrapperText from "../Wrapper/WrapperText";
 
 import GameLogo from "../../assets/game.png";
 import ButtonSkin from "../BTN/Button";
+import { useEffect, useState } from "react";
+import { API_ENDPOINT } from "../../API/url";
+import { HardCodedGameName } from "../../Constant/gameName";
 
 const GameIntro = () => {
+  const [gameName, setGameName] = useState(HardCodedGameName);
   const playHandler = () => {
     console.log("How to Play");
   };
@@ -12,13 +16,30 @@ const GameIntro = () => {
     console.log("Start Game");
   };
 
+  // fetch function
+  const fetchGameDetails = async () => {
+    const response = await fetch(API_ENDPOINT);
+    const data = await response.json();
+    return data;
+  };
+  // fetch game name
+  useEffect(() => {
+    fetchGameDetails()
+      .then((data) => {
+        setGameName(data?.Game?.name);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <Wrapper>
       <div className="intro-container">
         <WrapperText>
           <section className="intro-content-wrapper">
             <div className="intro-content">
-              <h1>LASERTAG</h1>
+              <h1>{gameName.toUpperCase()}</h1>
               <p>
                 Exhilarating and action-packed gaming experience that combines
                 strategic thinking, quick reflexes, and a quest for treasure.
