@@ -1,8 +1,15 @@
 # VR Gaming UI Project
-## UI Video 
-<video controls autoplay src="Rahul-Keshri---VR-Gaming.mp4" title="Title"></video>
+## UI 
+#### Home
+![alt text](image.png) 
 
+#### Instructions
+![alt text](image-1.png)
 
+#### Starting Game
+![alt text](image-2.png)
+
+## With Sound Effects 🎶🎶
 
 ## Tech Stack
 ### Typescript + React + Vite + PureCSS
