@@ -63,6 +63,13 @@ ol {
   font-style: normal;
   text-align: center;
   cursor: pointer;
+  transition: all 400ms;
+}
+
+.global-button:hover,
+.global-button:active,
+.global-button:focus {
+  transform: scale(1.1);
 }
 
 /* Game Screen One */
@@ -142,6 +149,7 @@ ol {
 .instructions ol {
   padding-left: 10px;
 }
+
 .instructions li {
   font-size: 14px;
   font-family: "Titillium Web", sans-serif;
@@ -179,14 +187,15 @@ ol {
 .play-game-label {
   font-family: "Titillium Web", sans-serif;
   font-style: normal;
-  font-size: 6rem;
+  font-size: 4rem;
   color: #fff;
   flex: 1;
+  font-weight: bold;
   align-self: center;
   text-align: center;
 }
 
 svg {
-  background-color: #00000044;
+  background-color: #0000007d;
   border-radius: 100%;
 }
