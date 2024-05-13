@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GameIntro from "./components/Screens/GameIntro";
 import GameInstructions from "./components/Screens/GameInstructions";
+import GamePlay from "./components/Screens/GamePlay";
+import { Howl } from "howler";
+import BgSound from "./assets/bgMusic.mp3";
 
 const App = () => {
   const [showIntro, setShowIntro] = useState(true);
@@ -25,6 +28,18 @@ const App = () => {
     setShowGameStartingScreen(false);
   };
 
+  useEffect(() => {
+    const bgSound = new Howl({
+      src: [BgSound],
+      volume: 0.4,
+      autoplay: true,
+    });
+    bgSound.play();
+    return () => {
+      bgSound.stop();
+    };
+  }, []);
+
   return (
     <>
       {showIntro && !showInstructions && !showGameStartingScreen && (
@@ -39,7 +54,9 @@ const App = () => {
           showGameIntro={showGameIntroHandler}
         />
       )}
-      {!showIntro && !showInstructions && showGameStartingScreen && <div></div>}
+      {!showIntro && !showInstructions && showGameStartingScreen && (
+        <GamePlay />
+      )}
     </>
   );
 };

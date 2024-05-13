@@ -156,3 +156,37 @@ ol {
   justify-content: center;
   gap: 4rem;
 }
+
+/* Timer Styles */
+.playContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: "Titillium Web", sans-serif;
+  font-style: normal;
+  color: #fff;
+}
+
+.playTitle {
+  font-weight: 600;
+}
+
+.play-label {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.play-game-label {
+  font-family: "Titillium Web", sans-serif;
+  font-style: normal;
+  font-size: 6rem;
+  color: #fff;
+  flex: 1;
+  align-self: center;
+  text-align: center;
+}
+
+svg {
+  background-color: #00000044;
+  border-radius: 100%;
+}
